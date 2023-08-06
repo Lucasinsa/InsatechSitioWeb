@@ -1,0 +1,218 @@
+/*--------------------------*/
+/* Reseteo y css general    */
+/*--------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #000;
+    color: #fff;
+    font-weight: 400;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+/*-------------------------------------------*/
+/* Header y nav  (Dispositivos < 992px)      */
+/*-------------------------------------------*/
+header {
+    height: 100px;
+    background-color: #111;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    top: 0;
+}
+
+header img {
+    height: 95px;
+    width: 95px;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+header img:hover {
+    transform: rotate(360deg);
+}
+
+/*--------------------------------------------*/
+/* Contenido de la página                     */
+/*--------------------------------------------*/
+.contenido {
+    margin-top: 100px;
+    min-height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    background: url("../images/fondo.avif") fixed center/cover;
+    padding-bottom: 100px;
+}
+
+.listado-precios {
+    width: 1000px;
+    padding: 40px;
+    background-color: #111;
+    margin-top: 50px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.listado-precios h1 {
+    font-size: 26px;
+    color: #5f5be8;
+}
+
+.listado-precios h2 {
+    margin-top: 40px;
+}
+
+ul {
+    list-style: none;
+}
+
+/*------------------------------------------*/
+/* Footer (Dispositivos ≥992px y <992px)    */
+/*------------------------------------------*/
+footer {
+    background-color: #111;
+    padding-top: 40px;
+    color: white;
+}
+footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+footer .footer-content h2, footer .footer-content h3, footer .footer-content h4 {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 3rem;
+    margin-bottom: 20px;
+}
+footer .footer-content p {
+    max-width: 500px;
+    margin: 0 30px;
+    line-height: 28px;
+    font-size: 14px;
+    font-weight: 700;
+}
+footer .footer-content .socials {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 5px;
+}
+footer .footer-content .socials li:not(:last-child) {
+    margin-right: 30px;
+}
+footer .footer-content .socials a {
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+}
+footer .footer-content .socials a i {
+    font-size: 1.1rem;
+    margin-right: 8px;
+}
+footer .footer-content .socials a:hover {
+    color: #5f5be8;
+}
+footer .footer-content .socials a:hover i {
+    color: #5f5be8;
+}
+footer .footer-bottom {
+    background: black;
+    padding: 20px 0;
+    text-align: center;
+}
+footer .footer-bottom p {
+    font-weight: 700;
+    margin: 0 30px;
+    font-size: 14px;
+    word-spacing: 2px;
+}
+footer .footer-bottom span {
+    text-transform: uppercase;
+    opacity: 0.7;
+    font-weight: 400;
+}
+  
+/* --------------------------------------*/
+/* Footer (Dispositivos < 576px)         */
+/* --------------------------------------*/
+/*Dispositivos s (small)*/
+@media (max-width: 575px) {
+    footer .footer-content .socials {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto;
+        row-gap: 30px;
+        column-gap: 30px;
+        justify-items: stretch;
+        padding: 20px;
+    }
+    footer .footer-content .socials li:not(:last-child) {
+      margin-right: 0;
+    }
+    footer .footer-content .socials li:nth-child(5) {
+      grid-column: span 2;
+    }
+    footer .footer-content .socials a {
+      text-decoration: none;
+      color: white;
+    }
+    footer .footer-content .socials a i {
+      display: block;
+      margin-right: 0;
+    }
+}
+
+/* ------------------------------*/
+/* Barra de scrolleo y selección */
+/* ------------------------------*/
+::-webkit-scrollbar {
+    width: 8px;
+}
+  
+::-webkit-scrollbar-track {
+    background: black;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: #5f5be8;
+}
+ 
+::-moz-scrollbar-track {
+    background: black;
+}
+  
+::-moz-scrollbar-thumb {
+    background-color: #5f5be8;
+}
+
+::selection {
+    background-color: #5f5be8;
+    color: white;
+}
+
+
+
+
