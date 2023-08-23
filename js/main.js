@@ -1,290 +1,144 @@
-//Función para pedir el código del producto
+/*-----------------------*/
+/* CLASES                */
+/*-----------------------*/
+
+// CLase para los productos
+class Producto {
+    constructor(identificador,nombre,precio,categoria){
+        this.identificador = identificador;
+        this.nombre = nombre;
+        this.precio = parseFloat(precio);
+        this.categoria = categoria;
+        this.stock = 5;
+        this.cantidadEnCarrito = 0;
+    }
+}
+
+/*-----------------------*/
+/* VARIABLES GLOBALES    */
+/*-----------------------*/
+
+//Array que almacena todos los productos
+const productos = [
+    new Producto(1, "Procesador AMD Ryzen 3 3200G", 70900, "Procesadores"),
+    new Producto(2, "Procesador AMD Ryzen 5 3600", 102550, "Procesadores"),
+    new Producto(3, "Mother Asrock B550M-HDV DDR4 AM4", 74450, "Motherboards"),
+    new Producto(4, "Mother Asrock A620M-HDV DDR5 AM5", 84400, "Motherboards"),
+    new Producto(5, "Placa de video ASUS GeForce RTX 2060 6GB", 213500, "Placas de video"),
+    new Producto(6, "Placa de video ASUS GeForce RTX 3060 TI 8GB", 299550, "Placas de video"),
+    new Producto(7, "Memoria Corsair DDR4 8GB 2666Mhz", 20900, "Memorias RAM"),
+    new Producto(8, "Memoria Patriot Viper DDR4 8GB 3200Mhz", 23850, "Memorias RAM"),
+    new Producto(9, "Gabinete Deepcool MATREXX 55 V3", 41700, "Gabinetes"),
+    new Producto(10, "Gabinete Kolink Observatory Lite Mesh", 42600, "Gabinetes"),
+    new Producto(11, "Fuente Corsair 650W 80 Plus Bronze CV650", 44800, "Fuentes"),
+    new Producto(12, "Fuente Gigabyte 550W 80 Plus Bronze P550B", 36400, "Fuentes")
+];
+
+//Array que almacena los productos agregados al carrito de compras
+const carrito = [];
+
+/*-----------------------*/
+/* FUNCIONES             */
+/*-----------------------*/
+
+//Función para dar bienvenida al usuario
+const darBienvenida = () => alert("Bienvenido a INSATECH!");
+
+//Función que permite al usuario agregar productos al carrito hasta presionar "0".
+const ejecutarBucle = () => {
+    let codigoProducto;
+
+    do {
+        codigoProducto = pedirCodigoProducto();
+        evaluarCodigoProducto(codigoProducto);
+    }while(codigoProducto != 0);
+}
+
+//Función que pide y retorna el código de producto ingresado por el usuario
 const pedirCodigoProducto = () => {
     let codigoProducto = prompt(`Ingrese el código del producto que desea agregar a su carrito,
 según el listado de precios o presione "0" para finalizar.
-Recuerde que el máximo por producto es de ${cantidadMaxima} UNIDADES.
+Recuerde que el máximo por producto es de 5 UNIDADES.
 
 PROCESADORES
-1- Procesador AMD Ryzen 3 3200G ($${precio1})
-2- Procesador AMD Ryzen 5 3600 ($${precio2})
+${productos[0].identificador}- ${productos[0].nombre} ($${productos[0].precio})
+${productos[1].identificador}- ${productos[1].nombre} ($${productos[1].precio})
 MOTHERBOARDS
-3- Mother Asrock B550M-HDV DDR4 AM4 ($${precio3})
-4- Mother Asrock A620M-HDV DDR5 AM5 ($${precio4})
+${productos[2].identificador}- ${productos[2].nombre} ($${productos[2].precio})
+${productos[3].identificador}- ${productos[3].nombre} ($${productos[3].precio})
 PLACAS DE VIDEO
-5- Placa de video ASUS GeForce RTX 2060 6GB ($${precio5})
-6- Placa de video ASUS GeForce RTX 3060 TI 8GB ($${precio6})
+${productos[4].identificador}- ${productos[4].nombre} ($${productos[4].precio})
+${productos[5].identificador}- ${productos[5].nombre} ($${productos[5].precio})
 MEMORIAS RAM
-7- Memoria Corsair DDR4 8GB 2666Mhz ($${precio7})
-8- Memoria Patriot Viper DDR4 8GB 3200Mhz ($${precio8})
+${productos[6].identificador}- ${productos[6].nombre} ($${productos[6].precio})
+${productos[7].identificador}- ${productos[7].nombre} ($${productos[7].precio})
 GABINETES
-9- Gabinete Deepcool MATREXX 55 V3($${precio9})
-10- Gabinete Kolink Observatory Lite Mesh ($${precio10})
+${productos[8].identificador}- ${productos[8].nombre} ($${productos[8].precio})
+${productos[9].identificador}- ${productos[9].nombre} ($${productos[9].precio})
 FUENTES
-11- Fuente Corsair 650W 80 Plus Bronze CV650 ($${precio11})
-12- Fuente Gigabyte 550W 80 Plus Bronze P550B ($${precio12})`);
+${productos[10].identificador}- ${productos[10].nombre} ($${productos[10].precio})
+${productos[11].identificador}- ${productos[11].nombre} ($${productos[11].precio})`);
     return parseInt(codigoProducto);
 };
 
-//Función para pedir la cantidad de productos a agregar al carrito de compras
-const pedirCantidadProductos = (cantidadActual) => {
-    let cantidadProductos;
-    do{
-        cantidadProductos = parseInt(prompt("Ingrese la cantidad del producto que quiere añadir:\nCantidad actual: " + cantidadActual + " unidades."));
-        if(isNaN(cantidadProductos) || cantidadProductos <= 0) {
-            alert("Ingrese un número válido.");
-        }
-        console.log(cantidadProductos);
-    }while(isNaN(cantidadProductos) || cantidadProductos <= 0);
-    return cantidadProductos;
-};
-
-//Función que pide la verificación de la compra
-const verificarCompra = () => {
-    let confirmacionCompra = confirm(`Presione "ACEPTAR" para confirmar o "CANCELAR" para cancelar su compra.
-
-RESUMEN DE LA COMPRA:
-
-PROCESADORES
-1- Procesador AMD Ryzen 3 3200G ($${precio1})(x${cantidad1})
-2- Procesador AMD Ryzen 5 3600 ($${precio2})(x${cantidad2})
-MOTHERBOARDS
-3- Mother Asrock B550M-HDV DDR4 AM4 ($${precio3})(x${cantidad3})
-4- Mother Asrock A620M-HDV DDR5 AM5 ($${precio4})(x${cantidad4})
-PLACAS DE VIDEO
-5- Placa de video ASUS GeForce RTX 2060 6GB GDDR6 ($${precio5})(x${cantidad5})
-6- Placa de video ASUS GeForce RTX 3060 TI 8GB ($${precio6})(x${cantidad6})
-MEMORIAS RAM
-7- Memoria Corsair DDR4 8GB 2666Mhz ($${precio7})(x${cantidad7})
-8- Memoria Patriot Viper DDR4 8GB 3200Mhz Steel ($${precio8})(x${cantidad8})
-GABINETES
-9- Gabinete Deepcool MATREXX 55 V3 ($${precio9})(x${cantidad9})
-10- Gabinete Kolink Observatory Lite Mesh ($${precio10})(x${cantidad10})
-FUENTES
-11- Fuente Corsair 650W 80 Plus Bronze CV650 ($${precio11})(x${cantidad11})
-12- Fuente Gigabyte 550W 80 Plus Bronze P550B ($${precio12})(x${cantidad12})
-
-Precio total: $${precioTotal}.`);
-    return confirmacionCompra;
-}
-
-//Variables globales
-let codigoProducto;
-let cantidadProductos;
-const precio1 = 70900, precio2 = 102550, precio3 = 74450, precio4 = 84400, precio5 = 213500, precio6 = 299550, precio7 = 20900, precio8 = 23850, precio9 = 41700, precio10 = 42600, precio11 = 44800, precio12 = 36400;
-let cantidad1 = 0, cantidad2 = 0, cantidad3 = 0, cantidad4 = 0, cantidad5 = 0, cantidad6 = 0, cantidad7 = 0, cantidad8 = 0, cantidad9 = 0, cantidad10 = 0, cantidad11 = 0, cantidad12 = 0;
-const cantidadMaxima = 5;
-let precioTotal = 0;
-let confirmacionCompra;
-
-//Código principal
-//Bienvenida al usuario
-alert("Bienvenido a INSATECH!");
-//Permito que el cliente agregue productos al carro hasta presionar "0"
-do {
-    codigoProducto = pedirCodigoProducto();
-    switch(codigoProducto){
-        case 0:
-            if(precioTotal != 0) {
-                confirmacionCompra = verificarCompra();
-            }
-            else {
-                alert("No compró nada. Puede volver más tarde!");
-            }
-            break;
-        case 1:
-            if(!(cantidad1 == cantidadMaxima)) {
-                cantidadProductos = pedirCantidadProductos(cantidad1);
-                if(!((cantidad1 + cantidadProductos) > cantidadMaxima)) {
-                    cantidad1 += cantidadProductos;
-                    precioTotal += (cantidadProductos * precio1);
-                }
-                else {
-                    alert(`El límite de unidades de este producto es de (${cantidadMaxima} UNIDADES).`);
-                }
-            }
-            else {
-                alert(`Usted ha llegado al límite de unidades de este producto (${cantidadMaxima} UNIDADES).`);
-            }
-            break;
-        case 2:
-            if(!(cantidad2 == cantidadMaxima)) {
-                cantidadProductos = pedirCantidadProductos(cantidad2);
-                if(!((cantidad2 + cantidadProductos) > cantidadMaxima)) {
-                    cantidad2 += cantidadProductos;
-                    precioTotal += (cantidadProductos * precio2);
-                }
-                else {
-                    alert(`El límite de unidades de este producto es de (${cantidadMaxima} UNIDADES).`);
-                }
-            }
-            else {
-                alert(`Usted ha llegado al límite de unidades de este producto (${cantidadMaxima} UNIDADES).`);
-            }
-            break;
-        case 3:
-            if(!(cantidad3 == cantidadMaxima)) {
-                cantidadProductos = pedirCantidadProductos(cantidad3);
-                if(!((cantidad3 + cantidadProductos) > cantidadMaxima)) {
-                    cantidad3 += cantidadProductos;
-                    precioTotal += (cantidadProductos * precio3);
-                }
-                else {
-                    alert(`El límite de unidades de este producto es de (${cantidadMaxima} UNIDADES).`);
-                }
-            }
-            else {
-                alert(`Usted ha llegado al límite de unidades de este producto (${cantidadMaxima} UNIDADES).`);
-            }
-            break;
-        case 4:
-            if(!(cantidad4 == cantidadMaxima)) {
-                cantidadProductos = pedirCantidadProductos(cantidad4);
-                if(!((cantidad4 + cantidadProductos) > cantidadMaxima)) {
-                    cantidad4 += cantidadProductos;
-                    precioTotal += (cantidadProductos * precio4);
-                }
-                else {
-                    alert(`El límite de unidades de este producto es de (${cantidadMaxima} UNIDADES).`);
-                }
-            }
-            else {
-                alert(`Usted ha llegado al límite de unidades de este producto (${cantidadMaxima} UNIDADES).`);
-            }
-            break;
-        case 5:
-            if(!(cantidad5 == cantidadMaxima)) {
-                cantidadProductos = pedirCantidadProductos(cantidad5);
-                if(!((cantidad5 + cantidadProductos) > cantidadMaxima)) {
-                    cantidad5 += cantidadProductos;
-                    precioTotal += (cantidadProductos * precio5);
-                }
-                else {
-                    alert(`El límite de unidades de este producto es de (${cantidadMaxima} UNIDADES).`);
-                }
-            }
-            else {
-                alert(`Usted ha llegado al límite de unidades de este producto (${cantidadMaxima} UNIDADES).`);
-            }
-            break;
-        case 6:
-            if(!(cantidad6 == cantidadMaxima)) {
-                cantidadProductos = pedirCantidadProductos(cantidad6);
-                if(!((cantidad6 + cantidadProductos) > cantidadMaxima)) {
-                    cantidad6 += cantidadProductos;
-                    precioTotal += (cantidadProductos * precio6);
-                }
-                else {
-                    alert(`El límite de unidades de este producto es de (${cantidadMaxima} UNIDADES).`);
-                }
-            }
-            else {
-                alert(`Usted ha llegado al límite de unidades de este producto (${cantidadMaxima} UNIDADES).`);
-            }
-            break;
-        case 7:
-            if(!(cantidad7 == cantidadMaxima)) {
-                cantidadProductos = pedirCantidadProductos(cantidad7);
-                if(!((cantidad7 + cantidadProductos) > cantidadMaxima)) {
-                    cantidad7 += cantidadProductos;
-                    precioTotal += (cantidadProductos * precio7);
-                }
-                else {
-                    alert(`El límite de unidades de este producto es de (${cantidadMaxima} UNIDADES).`);
-                }
-            }
-            else {
-                alert(`Usted ha llegado al límite de unidades de este producto (${cantidadMaxima} UNIDADES).`);
-            }
-            break;
-        case 8:
-            if(!(cantidad8 == cantidadMaxima)) {
-                cantidadProductos = pedirCantidadProductos(cantidad8);
-                if(!((cantidad8 + cantidadProductos) > cantidadMaxima)) {
-                    cantidad8 += cantidadProductos;
-                    precioTotal += (cantidadProductos * precio8);
-                }
-                else {
-                    alert(`El límite de unidades de este producto es de (${cantidadMaxima} UNIDADES).`);
-                }
-            }
-            else {
-                alert(`Usted ha llegado al límite de unidades de este producto (${cantidadMaxima} UNIDADES).`);
-            }
-            break;
-        case 9:
-            if(!(cantidad9 == cantidadMaxima)) {
-                cantidadProductos = pedirCantidadProductos(cantidad9);
-                if(!((cantidad9 + cantidadProductos) > cantidadMaxima)) {
-                    cantidad9 += cantidadProductos;
-                    precioTotal += (cantidadProductos * precio9);
-                }
-                else {
-                    alert(`El límite de unidades de este producto es de (${cantidadMaxima} UNIDADES).`);
-                }
-            }
-            else {
-                alert(`Usted ha llegado al límite de unidades de este producto (${cantidadMaxima} UNIDADES).`);
-            }
-            break;
-        case 10:
-            if(!(cantidad10 == cantidadMaxima)) {
-                cantidadProductos = pedirCantidadProductos(cantidad10);
-                if(!((cantidad10 + cantidadProductos) > cantidadMaxima)) {
-                    cantidad10 += cantidadProductos;
-                    precioTotal += (cantidadProductos * precio10);
-                }
-                else {
-                    alert(`El límite de unidades de este producto es de (${cantidadMaxima} UNIDADES).`);
-                }
-            }
-            else {
-                alert(`Usted ha llegado al límite de unidades de este producto (${cantidadMaxima} UNIDADES).`);
-            }
-            break;
-        case 11:
-            if(!(cantidad11 == cantidadMaxima)) {
-                cantidadProductos = pedirCantidadProductos(cantidad11);
-                if(!((cantidad11 + cantidadProductos) > cantidadMaxima)) {
-                    cantidad11 += cantidadProductos;
-                    precioTotal += (cantidadProductos * precio11);
-                }
-                else {
-                    alert(`El límite de unidades de este producto es de (${cantidadMaxima} UNIDADES).`);
-                }
-            }
-            else {
-                alert(`Usted ha llegado al límite de unidades de este producto (${cantidadMaxima} UNIDADES).`);
-            }
-            break;
-        case 12:
-            if(!(cantidad12 == cantidadMaxima)) {
-                cantidadProductos = pedirCantidadProductos(cantidad12);
-                if(!((cantidad12 + cantidadProductos) > cantidadMaxima)) {
-                    cantidad12 += cantidadProductos;
-                    precioTotal += (cantidadProductos * precio12);
-                }
-                else {
-                    alert(`El límite de unidades de este producto es de (${cantidadMaxima} UNIDADES).`);
-                }
-            }
-            else {
-                alert(`Usted ha llegado al límite de unidades de este producto (${cantidadMaxima} UNIDADES).`);
-            }
-            break;
-        default:
-            alert("Ingrese una opción válida.");
-            break;
+//Función que evalua el código de producto ingresado por el usuario:
+//-En caso de ser 0 no se realiza ninguna acción
+//-En caso de NO coincidir con ningún identificador vuelve a pedir el ingreso
+//-En caso de SI coincidir con un identificador, se entra en la función agregarAlCarrito para el producto seleccionado.
+const evaluarCodigoProducto = (codigoProducto) => {
+    let productoSeleccionado = productos.find((producto) => producto.identificador === codigoProducto);
+    if(codigoProducto !== 0 && productoSeleccionado === undefined) {
+        alert("Opción inválida, ingrese una correcta.");
+    } else if(codigoProducto !== 0){
+        agregarAlCarrito(productoSeleccionado);
     }
-}while(codigoProducto != 0);
-
-//En caso de haber agregado productos al carrito de compras, muestro si el usuario confirmó la compra o no.
-if(confirmacionCompra === true) {
-    alert("La compra fue realizada con éxito. Gracias por confiar!");
-}
-else if(confirmacionCompra === false) {
-    alert("Tu compra se canceló correctamente. Puede volver más tarde!");
 }
 
+//Función que agrega un producto al carrito:
+//-Solo si hay menos de 5 unidades de ese producto
+const agregarAlCarrito = (productoSeleccionado) => {
+    if(productoSeleccionado.cantidadEnCarrito < 5) {
+        let cantidadSeleccionada = parseInt(prompt("Ingrese la cantidad del producto que quiere añadir:\nCantidad actual: " + productoSeleccionado.cantidadEnCarrito  + " unidades."));
+        if((productoSeleccionado.stock - cantidadSeleccionada >= 0) && cantidadSeleccionada != 0){
+            productoSeleccionado.cantidadEnCarrito += cantidadSeleccionada;
+            productoSeleccionado.stock -= cantidadSeleccionada;
+            if(!(carrito.some((producto) => producto.identificador === productoSeleccionado.identificador))) {
+                carrito.push(productoSeleccionado);
+            }
+        } else if(cantidadSeleccionada === 0){
+            alert(`Debe agregar mínimo 1 producto.`);
+        } else {
+            alert(`El máximo de unidades que puede agregar del producto es de \n(5 UNIDADES).`);
+        }
+    } else {
+        alert(`Usted ha llegado al límite de unidades en carrito de este producto \n(${productoSeleccionado.cantidadEnCarrito} UNIDADES).`);
+    }    
+}
 
+//Función que confirma/cancela compra y muestra resumen y total de la compra
+const confirmarCompra = () => {
+    if(carrito.length === 0) {
+        alert("No agregó productos al carrito.\n\nGracias por su visita, vuelva más tarde.");
+    } else {
+        let resumen = carrito.map((producto) => {
+            return `${producto.identificador}- ${producto.nombre} ($${producto.precio}) (x${producto.cantidadEnCarrito})`
+        }).join("\n");
+        let precioTotal = carrito.reduce((acumulador,producto) => acumulador += (producto.precio * producto.cantidadEnCarrito), 0);
+        let confirmar = confirm(`RESUMEN DE SU COMPRA:\n\n${resumen}\n\nPrecio total: $${precioTotal}\n\nDesea confirmar la compra?`);
+        if(confirmar) {
+            alert("COMPRA REALIZADA CON ÉXITO! Gracias por confiar.");
+        } else{
+            alert("Compra cancelada con éxito. Vuelva más tarde.");
+        }
+    }
+}
+
+/*-----------------------*/
+/* CÓDIGO PRINCIPAL      */
+/*-----------------------*/
+
+darBienvenida();
+ejecutarBucle();
+confirmarCompra();
 
 
