@@ -39,7 +39,7 @@ const productos = [
     new Producto(13, "Mother Biostar B450M HP DDR4 M4", 55850, "Motherboards AMD", "./images/productos/producto-13.jpg",false),
     new Producto(14, "Mother ASUS PRIME A520M-K DDR4 AM4", 76910, "Motherboards AMD ", "./images/productos/producto-14.jpg", false),
     new Producto(15, "Mother MSI A520M-A PRO DDR4 AM4", 77000, "Motherboards AMD", "./images/productos/producto-15.jpg", false),
-    new Producto(16, "Mother MSI A320M-A PRO AM4", 83600, "Motherboards AMD", "../images/productos/producto-16.jpg", false),
+    new Producto(16, "Mother MSI A320M-A PRO AM4", 83600, "Motherboards AMD", "./images/productos/producto-16.jpg", false),
     new Producto(17, "Mother Gigabyte A520M-K V2 DDR4 AM4", 87000, "Motherboards AMD", "./images/productos/producto-17.jpg", false),
     new Producto(18, "Mother MSI B450M-A PRO MAX", 90930, "Motherboards AMD", "./images/productos/producto-18.jpg", false),
     new Producto(19, "Mother ASUS PRIME H510M-K R2.0 Socket 1200", 89500, "Motherboards Intel", "./images/productos/producto-19.jpg", false),
