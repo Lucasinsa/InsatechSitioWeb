@@ -21,7 +21,7 @@ const mostrarProductos = () => {
     let innerHTML = "";
     for(let producto of carrito) {
         innerHTML += `  <div class="card-producto" data-producto-id="${producto.identificador}">
-                            <img src="${producto.imagen}" alt="Producto ${producto.identificador}">
+                            <img src=".${producto.imagen}" alt="Producto ${producto.identificador}">
                             <div class="informacion-producto">
                                 <h2>${producto.nombre}</h2>
                                 <p>$ ${(producto.precio * producto.cantidadEnCarrito).toLocaleString()}</p>
