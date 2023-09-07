@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--Lenguaje de la página es Español-Argentina-->
+<html lang="es-AR">
+    <head>
+        <!--Metadatos, título e icono-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Lucas Insaurralde Sousa">
+        <meta name="description" content="Encontrá los mejores componentes de PC en nuestra tienda en línea. Amplia selección de procesadores, tarjetas gráficas, memorias RAM, y más. ¡Actualizá y mejorá tu computadora con productos de alta calidad!">
+        <meta name="keywords" content="insatech, componentes de pc, hardware, procesadores, tarjetas gráficas, memorias ram, actualización de pc">
+        <title>Insatech | PC COMPONENTES | Sección Carrito de compras</title>
+        <link rel="shortcut icon" href="./images/logo-sin-fondo.png" type="image/x-icon">
+        <!--Enlace con Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <!--Link con CSS-->
+        <link rel="stylesheet" href="../css/style.css">
+        <!--Link con Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;1,100&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header-confirmar-compra">
+            <div class="logo">
+                <a href="../index.html"><img src="../images/logo-sin-fondo.png" alt="Logo de la página"></a>
+            </div>
+            <div class="carrito">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cantidad-en-carrito" class="ocultar"></span>
+            </div>
+        </header>
+        <div class="contenido contenido-pagina-carrito">
+            <main class="listado-productos listado-pagina-contenido">
+                <h1>CARRITO DE COMPRAS</h1>
+                <div class="contenedor-productos contenedor-display-flex" id="contenedor-carrito"></div>
+                <div class="contenedor-precio-total"></div>
+            </main>
+        </div>
+        <!--Inicio del footer-->
+        <footer>
+            <div class="footer-content">
+                <h3>Insatech</h3>
+                <p>
+                    Encontrá los mejores componentes de PC en nuestra tienda en línea. Amplia selección de procesadores, tarjetas gráficas, memorias RAM, motherboards y más. ¡Actualizá y mejorá tu computadora con productos de alta calidad!
+                </p>
+                <ul class="socials">
+                    <li><a href="https://facebook.com" target="_blank"><i class="fa fa-facebook"></i>Facebook</a></li>
+                    <li><a href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i>Twitter</a></li>
+                    <li><a href="https://youtube.com" target="_blank"><i class="fa fa-youtube"></i>Youtube</a></li>
+                    <li><a href="https://linkedin.com" target="_blank"><i class="fa fa-linkedin-square"></i>Linkedin</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright &copy;2023 Insatech. Designed by <span>Lucas Insaurralde Sousa</span></p>
+            </div>
+        </footer>
+        <!--Fin del footer-->
+        <!--Script para usar iconos de Fontawesome-->
+        <script src="https://kit.fontawesome.com/c99dafd52c.js" crossorigin="anonymous"></script>
+        <!--Script para usar Bootstrap-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <!--Script personalizado-->
+        <script src="../js/seccion-carrito-de-compras.js"></script>
+    </body>
+</html>
