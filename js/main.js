@@ -268,7 +268,7 @@ const filtrarPorCategoria = (categoria, imagen) => {
 /* CÓDIGO PRINCIPAL      */
 /*-----------------------*/
 
-//Si hay productos en el carrito del LS, actualizo el stock y cantidad en carrito 
+//Si hay productos en el carrito del LS, actualizo el stock y cantidad en el carrito 
 //de los productos que se encentran allí.
 carrito.length !== 0 && recuperarProductos();
 
