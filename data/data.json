@@ -1,0 +1,482 @@
+[
+    {
+     	"identificador":1, 
+     	"nombre":"Procesador AMD Ryzen 3 4100 Sin cooler OEM", 
+	    "precio":48050, 
+	    "categoria":"Procesadores AMD", 
+	    "imagen":"./images/productos/producto-1.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":2, 
+     	"nombre":"Procesador AMD RYZEN 3 3200G 4.0GHz Turbo + Radeon Vega 8 AM4 Wraith Stealth Cooler", 
+	    "precio":84900, 
+	    "categoria":"Procesadores AMD", 
+	    "imagen":"./images/productos/producto-2.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":3, 
+     	"nombre":"Procesador AMD RYZEN 5 3600 4.2GHz Turbo AM4 Wraith Stealth Cooler", 
+	    "precio":123500, 
+	    "categoria":"Procesadores AMD", 
+	    "imagen":"./images/productos/producto-3.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":4, 
+     	"nombre":"Procesador AMD Ryzen 5 5500 4.2GHz Turbo + Wraith Stealth Cooler", 
+	    "precio":134900, 
+	    "categoria":"Procesadores AMD", 
+	    "imagen":"./images/productos/producto-4.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":5, 
+     	"nombre":"Procesador AMD Ryzen 5 5600G 4.4GHz Turbo + Wraith Stealth Cooler", 
+	    "precio":158000, 
+	    "categoria":"Procesadores AMD", 
+	    "imagen":"./images/productos/producto-5.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":6, 
+     	"nombre":"Procesador Intel Celeron G5925 3.6GHz Socket 1200 Comet Lake", 
+	    "precio":48900, 
+	    "categoria":"Procesadores Intel", 
+	    "imagen":"./images/productos/producto-6.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":7, 
+     	"nombre":"Procesador Intel Core i3 10100F 4.3GHz Turbo Socket 1200 Comet Lake", 
+	    "precio":61950, 
+	    "categoria":"Procesadores Intel", 
+	    "imagen":"./images/productos/producto-7.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":8, 
+     	"nombre":"Procesador Intel Core i5 10400 4.3GHz Turbo Socket 1200 Comet Lake", 
+	    "precio":146500, 
+	    "categoria":"Procesadores Intel", 
+	    "imagen":"./images/productos/producto-8.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":9, 
+     	"nombre":"Procesador Intel Core i5 11400F 4.40GHz Turbo S1200 Rocket Lake", 
+	    "precio":156350, 
+	    "categoria":"Procesadores Intel", 
+	    "imagen":"./images/productos/producto-9.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":10, 
+     	"nombre":"Procesador Intel Core i5 11600K 4.9GHz Turbo Socket 1200 Rocket Lake", 
+	    "precio":185350, 
+	    "categoria":"Procesadores Intel", 
+	    "imagen":"./images/productos/producto-10.jpg",
+	    "destacado": true
+    },
+    {
+     	"identificador":11, 
+     	"nombre":"Procesador Intel Core i5 13600KF 5.1GHz Turbo Socket 1700", 
+	    "precio":255150, 
+	    "categoria":"Procesadores Intel", 
+	    "imagen":"./images/productos/producto-11.jpg",
+	    "destacado": true
+    },
+    {
+     	"identificador":12, 
+     	"nombre":"Procesador Intel Core i7 11700K 5.0GHz Turbo Socket 1200 Rocket Lake", 
+	    "precio":346100, 
+	    "categoria":"Procesadores Intel", 
+	    "imagen":"./images/productos/producto-12.jpg",
+	    "destacado": true
+    },
+    {
+     	"identificador":13, 
+     	"nombre":"Mother Biostar B450M HP DDR4 M4", 
+	    "precio":55850, 
+	    "categoria":"Motherboards AMD", 
+	    "imagen":"./images/productos/producto-13.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":14, 
+     	"nombre":"Mother ASUS PRIME A520M-K DDR4 AM4", 
+	    "precio":76910, 
+	    "categoria":"Motherboards AMD", 
+	    "imagen":"./images/productos/producto-14.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":15, 
+     	"nombre":"Mother MSI A520M-A PRO DDR4 AM4", 
+	    "precio":77000, 
+	    "categoria":"Motherboards AMD", 
+	    "imagen":"./images/productos/producto-15.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":16, 
+     	"nombre":"Mother MSI A320M-A PRO AM4", 
+	    "precio":83600, 
+	    "categoria":"Motherboards AMD", 
+	    "imagen":"./images/productos/producto-16.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":17, 
+     	"nombre":"Mother Gigabyte A520M-K V2 DDR4 AM4", 
+	    "precio":87000, 
+	    "categoria":"Motherboards AMD", 
+	    "imagen":"./images/productos/producto-17.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":18, 
+     	"nombre":"Mother MSI B450M-A PRO MAX", 
+	    "precio":90930, 
+	    "categoria":"Motherboards AMD", 
+	    "imagen":"./images/productos/producto-18.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":19, 
+     	"nombre":"Mother ASUS PRIME H510M-K R2.0 Socket 1200", 
+	    "precio":89500, 
+	    "categoria":"Motherboards Intel", 
+	    "imagen":"./images/productos/producto-19.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":20, 
+     	"nombre":"Mother ASUS PRIME H610M-K DDR4", 
+	    "precio":94360, 
+	    "categoria":"Motherboards Intel", 
+	    "imagen":"./images/productos/producto-20.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":21, 
+     	"nombre":"Mother ASUS PRIME B660M-K D4", 
+	    "precio":99500, 
+	    "categoria":"Motherboards Intel", 
+	    "imagen":"./images/productos/producto-21.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":22, 
+     	"nombre":"Mother MSI PRO B660M-A DDR4 s1700", 
+	    "precio":102700, 
+	    "categoria":"Motherboards Intel", 
+	    "imagen":"./images/productos/producto-22.jpg",
+	    "destacado": true
+    },
+    {
+     	"identificador":23, 
+     	"nombre":"Mother MSI MAG B660M BAZOOKA DDR4 S1700", 
+	    "precio":110900, 
+	    "categoria":"Motherboards Intel", 
+	    "imagen":"./images/productos/producto-23.jpg",
+	    "destacado": true
+    },
+    {
+     	"identificador":24, 
+     	"nombre":"Mother ASUS TUF GAMING B660M-PLUS WIFI D4", 
+	    "precio":159000, 
+	    "categoria":"Motherboards Intel", 
+	    "imagen":"./images/productos/producto-24.jpg",
+	    "destacado": true
+    },
+    {
+     	"identificador":25, 
+     	"nombre":"Placa de Video ASUS GeForce GTX 1650 4GB GDDR6 Phoenix EVO OC", 
+	    "precio":159290, 
+	    "categoria":"Placas de video Geforce", 
+	    "imagen":"./images/productos/producto-25.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":26, 
+     	"nombre":"Placa de Video ASUS Phoenix GeForce GTX 1630 4GB GDDR6", 
+	    "precio":212450, 
+	    "categoria":"Placas de video Geforce", 
+	    "imagen":"./images/productos/producto-26.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":27, 
+     	"nombre":"Placa de Video ASUS GeForce GTX 1650 4GB GDDR6 DUAL V2", 
+	    "precio":258000, 
+	    "categoria":"Placas de video Geforce", 
+	    "imagen":"./images/productos/producto-27.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":28, 
+     	"nombre":"Placa de Video ASUS GeForce RTX 2060 6GB GDDR6 DUAL EVO OC", 
+	    "precio":300000, 
+	    "categoria":"Placas de video Geforce", 
+	    "imagen":"./images/productos/producto-28.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":29, 
+     	"nombre":"Placa de Video ASUS GeForce GTX 1660 SUPER 6GB GDDR6 TUF", 
+	    "precio":335000, 
+	    "categoria":"Placas de video Geforce", 
+	    "imagen":"./images/productos/producto-29.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":30, 
+     	"nombre":"Placa de Video ASUS GeForce RTX 3070 8GB GDDR6 ROG STRIX GAMING OC V2", 
+	    "precio":500000, 
+	    "categoria":"Placas de video Geforce", 
+	    "imagen":"./images/productos/producto-30.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":31, 
+     	"nombre":"Placa de Video Asrock Radeon RX 550 2GB GDDR5 Phantom Gaming", 
+	    "precio":97600, 
+	    "categoria":"Placas de video Radeon AMD", 
+	    "imagen":"./images/productos/producto-31.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":32, 
+     	"nombre":"Placa de Video Asrock Radeon RX 6500 XT 4GB GDDR6 PHANTOM GAMING D OC", 
+	    "precio":228000, 
+	    "categoria":"Placas de video Radeon AMD", 
+	    "imagen":"./images/productos/producto-32.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":33, 
+     	"nombre":"Placa de Video XFX RX 580 8GB XXX OC RX-580P8DFD6", 
+	    "precio":245000, 
+	    "categoria":"Placas de video Radeon AMD", 
+	    "imagen":"./images/productos/producto-33.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":34, 
+     	"nombre":"Placa de Video XFX Radeon RX 6650 XT ULTRA 8GB GDDR6 SPEEDSTER QICK 308", 
+	    "precio":327000, 
+	    "categoria":"Placas de video Radeon AMD", 
+	    "imagen":"./images/productos/producto-34.jpg",
+	    "destacado": true
+    },
+    {
+     	"identificador":35, 
+     	"nombre":"Placa de Video XFX Radeon RX 6650 XT 8GB GDDR6 Speedster SWFT 210", 
+	    "precio":330000, 
+	    "categoria":"Placas de video Radeon AMD", 
+	    "imagen":"./images/productos/producto-35.jpg",
+	    "destacado": true
+    },
+    {
+     	"identificador":36, 
+     	"nombre":"Placa de Video Asrock Radeon RX 6700 XT 12GB GDDR6 Challenger D OC", 
+	    "precio":363000, 
+	    "categoria":"Placas de video Radeon AMD", 
+	    "imagen":"./images/productos/producto-36.jpg",
+	    "destacado": true
+    },
+    {
+     	"identificador":37, 
+     	"nombre":"Memoria Adata DDR4 16GB (2x8GB) 4133MHz XPG Spectrix D60G RGB", 
+	    "precio":65000, 
+	    "categoria":"Memorias", 
+	    "imagen":"./images/productos/producto-37.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":38, 
+     	"nombre":"Memoria Corsair DDR4 8GB 2666Mhz Vengeance LPX Black", 
+	    "precio":24300, 
+	    "categoria":"Memorias", 
+	    "imagen":"./images/productos/producto-38.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":39, 
+     	"nombre":"Memoria Corsair DDR4 8GB 3000MHz Vengeance LPX Black", 
+	    "precio":25300, 
+	    "categoria":"Memorias", 
+	    "imagen":"./images/productos/producto-39.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":40, 
+     	"nombre":"Memoria Adata DDR4 4GB 2666MHz Value", 
+	    "precio":14400, 
+	    "categoria":"Memorias", 
+	    "imagen":"./images/productos/producto-40.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":41, 
+     	"nombre":"Memoria Corsair DDR4 16GB (2x8GB) 2666MHz Vengeance RGB PRO White", 
+	    "precio":56000, 
+	    "categoria":"Memorias", 
+	    "imagen":"./images/productos/producto-41.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":42, 
+     	"nombre":"Memoria Crucial DDR4 8GB 2666MHz Basics", 
+	    "precio":20200, 
+	    "categoria":"Memorias", 
+	    "imagen":"./images/productos/producto-42.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":43, 
+     	"nombre":"Memoria Adata DDR4 8GB 3600Mhz XPG Spectrix D45G RGB", 
+	    "precio":29000, 
+	    "categoria":"Memorias", 
+	    "imagen":"./images/productos/producto-43.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":44, 
+     	"nombre":"Memoria Adata DDR4 8GB 2666MHz Value Sodimm Notebook", 
+	    "precio":26400, 
+	    "categoria":"Memorias notebook", 
+	    "imagen":"./images/productos/producto-44.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":45, 
+     	"nombre":"Memoria Hikvision DDR4 16GB 2666MHz CL19 SODIMM", 
+	    "precio":48800, 
+	    "categoria":"Memorias notebook", 
+	    "imagen":"./images/productos/producto-45.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":46, 
+     	"nombre":"Memoria Hikvision DDR4 16GB 3200MHz CL22 SODIMM", 
+	    "precio":51000, 
+	    "categoria":"Memorias notebook", 
+	    "imagen":"./images/productos/producto-46.jpg",
+	    "destacado": true
+    },
+    {
+     	"identificador":47, 
+     	"nombre":"Memoria Adata DDR4 16GB 2666MHz SODIMM Notebook", 
+	    "precio":56000, 
+	    "categoria":"Memorias notebook", 
+	    "imagen":"./images/productos/producto-47.jpg",
+	    "destacado": true
+    },
+    {
+     	"identificador":48, 
+     	"nombre":"Memoria KingDian DDR4 32GB 2666MHz SODIMM Notebook", 
+	    "precio":64800, 
+	    "categoria":"Memorias notebook", 
+	    "imagen":"./images/productos/producto-48.jpg",
+	    "destacado": true
+    },
+    {
+     	"identificador":49, 
+        "nombre":"Monitor Philips 19'' HDMI VGA",
+	    "precio":59500, 
+	    "categoria":"Monitores", 
+	    "imagen":"./images/productos/producto-49.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":50, 
+     	"nombre":"Monitor LG LED 19'' 19M38A-B VGA", 
+	    "precio":65800, 
+	    "categoria":"Monitores", 
+	    "imagen":"./images/productos/producto-50.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":51, 
+     	"nombre":"Monitor Samsung 19'' A330N HDMI", 
+	    "precio": 75650, 
+	    "categoria":"Monitores", 
+	    "imagen":"./images/productos/producto-51.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":52, 
+     	"nombre":"Monitor Hikvision 22'' DS-D5022QE-E VGA HDMI", 
+	    "precio": 78000, 
+	    "categoria":"Monitores", 
+	    "imagen":"./images/productos/producto-52.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":53, 
+     	"nombre":"Monitor ASUS 21.5'' VP228HE-J Full HD 1ms HDMI VGA", 
+	    "precio": 88900, 
+	    "categoria":"Monitores", 
+	    "imagen":"./images/productos/producto-53.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":54, 
+     	"nombre":"Monitor Samsung 22'' T350 75Hz IPS FHD FreeSync", 
+	    "precio": 90000, 
+	    "categoria":"Monitores", 
+	    "imagen":"./images/productos/producto-54.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":55, 
+     	"nombre":"Monitor Samsung 24'' T350 75Hz IPS Full HD FreeSync", 
+	    "precio": 102000, 
+	    "categoria":"Monitores", 
+	    "imagen":"./images/productos/producto-55.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":56, 
+     	"nombre":"Monitor LG LED 24'' 24MP400-B 75Hz IPS FHD FreeSync HDMI", 
+	    "precio": 104000, 
+	    "categoria":"Monitores", 
+	    "imagen":"./images/productos/producto-56.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":57, 
+     	"nombre":"Monitor Philips 27'' Full HD VGA HDMI DPORT Parlantes", 
+	    "precio": 118900, 
+	    "categoria":"Monitores", 
+	    "imagen":"./images/productos/producto-57.jpg",
+	    "destacado": false
+    },
+    {
+     	"identificador":58, 
+     	"nombre":"Monitor LG 24'' 24MK600M IPS Full HD Bordes Ultra Finos", 
+	    "precio": 127000, 
+	    "categoria":"Monitores", 
+	    "imagen":"./images/productos/producto-58.jpg",
+	    "destacado": true
+    },
+    {
+     	"identificador":59, 
+     	"nombre":"Monitor Gamer Samsung 24'' G50 Curvo 144Hz Full HD VA FreeSync", 
+	    "precio": 130000, 
+	    "categoria":"Monitores", 
+	    "imagen":"./images/productos/producto-59.jpg",
+	    "destacado": true
+    },
+    {
+     	"identificador":60, 
+     	"nombre":"Monitor ASUS 24'' VA24EHE-J Full HD", 
+	    "precio": 131700, 
+	    "categoria":"Monitores", 
+	    "imagen":"./images/productos/producto-60.jpg",
+	    "destacado": true
+    }
+]
