@@ -20,16 +20,17 @@ const cantidadEnCarritoHeader = document.getElementById("cantidad-en-carrito");
 const mostrarProductos = () => {
     let innerHTML = "";
     for(let producto of carrito) {
-        innerHTML += `  <div class="card-producto" data-producto-id="${producto.identificador}">
-                            <img src=".${producto.imagen}" alt="Producto ${producto.identificador}">
+        const {identificador,imagen,nombre,precio,cantidadEnCarrito} = producto;
+        innerHTML += `  <div class="card-producto" data-producto-id="${identificador}">
+                            <img src=".${imagen}" alt="Producto ${identificador}">
                             <div class="informacion-producto">
-                                <h2>${producto.nombre}</h2>
-                                <p>$ ${(producto.precio * producto.cantidadEnCarrito).toLocaleString()}</p>
+                                <h2>${nombre}</h2>
+                                <p>$ ${(precio * cantidadEnCarrito).toLocaleString()}</p>
                             </div>
                             <div class="seccion-agregar-quitar">
                                 <div class="contenedor-botones">
                                     <button class="restar-producto">-</button>
-                                    <p class="cantidad-producto">${producto.cantidadEnCarrito}</p>
+                                    <p class="cantidad-producto">${cantidadEnCarrito}</p>
                                     <button class="sumar-producto">+</button>
                                 </div>
                                 <button class="eliminar-producto"><i class="fa-solid fa-trash"></i></button>
@@ -57,7 +58,7 @@ const obtenerYagregarEventosBtns = () => {
                 productoSeleccionado.stock--;
                 guardarCarritoEnLs("Carrito",JSON.stringify(carrito));
                 mostrarProductos();
-            };
+            }
         });
     });
     //Eventos para todos los botones de RESTAR
@@ -70,17 +71,17 @@ const obtenerYagregarEventosBtns = () => {
                 productoSeleccionado.stock++;
                 guardarCarritoEnLs("Carrito",JSON.stringify(carrito));
                 mostrarProductos();
-            };
+            }
         });
     })
     //Eventos para todos los botones de ELIMINAR
     btnsEliminar.forEach(boton => {
         boton.addEventListener("click", (e) => {
-
             const productoId = parseInt(e.target.closest(".card-producto").getAttribute("data-producto-id"));
             const indiceProductoSeleccionado = carrito.findIndex(producto => producto.identificador === productoId);
             carrito.splice(indiceProductoSeleccionado,1);
             guardarCarritoEnLs("Carrito",JSON.stringify(carrito));
+            notificarEliminado();
             if(carrito.length === 0) {
                 contenedorCarrito.innerText = "No hay productos en el carrito.";
                 contenedorPrecioTotal.classList.add("ocultar");
@@ -97,11 +98,24 @@ const guardarCarritoEnLs = (clave, valor) => {
     localStorage.setItem(clave,valor);
 };
 
+//Función que notifica mediante mensaje flotante (Toastify JS) que se eliminó un producto
+const notificarEliminado = () => {
+    Toastify({
+        text: "PRODUCTO ELIMINADO",
+        duration: 1500,
+        gravity: "bottom",
+        style: {
+            background: "#5f5be8",
+            borderRadius: "10px",
+            cursor: "default"
+        }
+    }).showToast();
+};
+
 //Función que recibe las cards creadas en mostrarProductos y las muestra junto a su precio total
 const mostrarProductosyPrecioTotal = innerHTML => {
     contenedorCarrito.innerHTML = innerHTML;
     let precioTotal = calcularPrecioTotal();
-    console.log(precioTotal);
     contenedorPrecioTotal.innerHTML = `<div class="flex">
                                             <p>PRECIO TOTAL: <span>$ ${precioTotal.toLocaleString()}</span></p>
                                             <button id="btn-comprar">Comprar</button>
@@ -119,20 +133,13 @@ const calcularPrecioTotal = () => {
 const agregarEventoBtnCompra = precioTotal => {
     const btnComprar = document.getElementById("btn-comprar");
     btnComprar.addEventListener("click", () => {
-        alert(`Compra realizada! Gracias por confiar!\n\nPrecio total: $ ${precioTotal.toLocaleString()}`);
-        resetearCarrito();
-        redireccionarAInicio();
+        redireccionarAIniciarSesion();
     })
 };
 
-//Función que borra todo el carrito del LS
-const resetearCarrito = () => {
-    localStorage.removeItem("Carrito");
-}
-
 //Función que redirecciona al inicio si el usuario toca el botón comprar
-const redireccionarAInicio = () => {
-    window.location.href = "../index.html";
+const redireccionarAIniciarSesion = () => {
+    window.location.href = "iniciar-sesion.html";
 };
 
 //Función que actualiza la cantidad de elementos totales en el carrito del header.

@@ -8,12 +8,10 @@
         <meta name="author" content="Lucas Insaurralde Sousa">
         <meta name="description" content="Encontrá los mejores componentes de PC en nuestra tienda en línea. Amplia selección de procesadores, tarjetas gráficas, memorias RAM, y más. ¡Actualizá y mejorá tu computadora con productos de alta calidad!">
         <meta name="keywords" content="insatech, componentes de pc, hardware, procesadores, tarjetas gráficas, memorias ram, actualización de pc">
-        <title>Insatech | PC COMPONENTES | Sección Carrito de compras</title>
+        <title>Insatech | PC COMPONENTES | Finalizar pago</title>
         <link rel="shortcut icon" href="../images/logo-sin-fondo.png" type="image/x-icon">
         <!--Enlace con Bootstrap-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-        <!--Enlace con Toastify JS-->
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
         <!--Link con CSS-->
         <link rel="stylesheet" href="../css/style.css">
         <!--Link con Google Fonts-->
@@ -26,22 +24,56 @@
             <div class="logo">
                 <a href="../index.html"><img src="../images/logo-sin-fondo.png" alt="Logo de la página"></a>
             </div>
-            <div class="carrito">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span id="cantidad-en-carrito" class="ocultar"></span>
-            </div>
         </header>
-        <div class="contenido contenido-pagina-carrito">
-            <main class="listado-productos listado-pagina-contenido">
-                <h1>CARRITO DE COMPRAS</h1>
-                <div class="contenedor-productos contenedor-display-flex" id="contenedor-carrito"></div>
-                <div class="contenedor-precio-total"></div>
+        <div class="contenido-pagina-pago">
+            <main class="contenedor-principal-pago">
+                    <h1>FINALIZAR COMPRA</h1>
+                    <div class="contenedor-secciones">
+                        <section class="seccion-resumen">
+                            <h2>Resumen de su compra</h2>
+                            <ul class="lista-resumen"></ul>
+                            <p class="parrafo-precio-total">Precio total: $<span id="precio-total"></span></p>
+                        </section>
+                        <section class="seccion-datos"></section>
+                        <section class="seccion-tarjeta">
+                            <h2>Datos de la tarjeta</h2>
+                            <h3>Ingrese los datos para finalizar la compra</h3>
+                            <form id="formulario-tarjeta">
+                                <fieldset>
+                                    <label for="numero-tarjeta">Número de la tarjeta:</label>
+                                    <input type="number" id="numero-tarjeta" placeholder="Ingrese número tarjeta" name="numero-tarjeta" autocomplete="off">
+                                </fieldset>
+                                <fieldset>
+                                    <label for="nombre-tarjeta">Nombre:</label>
+                                    <input type="text" id="nombre-tarjeta" placeholder="Ingrese el nombre" name="nombre-tarjeta" autocomplete="off">
+                                </fieldset>
+                                <fieldset>
+                                    <label for="vigencia">Vigencia desde:</label>
+                                    <input type="date" id="vigencia" placeholder="Ingrese fecha vigencia" name="vigencia" autocomplete="off">
+                                </fieldset>
+                                <fieldset>
+                                    <label for="vencimiento">Vencimiento:</label>
+                                    <input type="date" id="vencimiento" placeholder="Ingrese el vencimiento" name="vencimiento" autocomplete="off">
+                                </fieldset>
+                                <fieldset>
+                                    <label for="cvc">CVC:</label>
+                                    <input type="number" id="cvc" placeholder="Ingrese su CVC" name="cvc" autocomplete="off">
+                                </fieldset>
+                                <div class="contenedor-ingresar">
+                                    <input type="submit" value="Finalizar compra">
+                                </div>
+                                <div class="mostrar-error" hidden>
+                                    <p class="error"></p>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
             </main>
         </div>
         <!--Inicio del footer-->
         <footer>
             <div class="footer-content">
-                <h3>Insatech</h3>
+                <h2>Insatech</h2>
                 <p>
                     Encontrá los mejores componentes de PC en nuestra tienda en línea. Amplia selección de procesadores, tarjetas gráficas, memorias RAM, motherboards y más. ¡Actualizá y mejorá tu computadora con productos de alta calidad!
                 </p>
@@ -57,13 +89,15 @@
             </div>
         </footer>
         <!--Fin del footer-->
-        <!--Script para usar Toastify JS-->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
         <!--Script para usar iconos de Fontawesome-->
         <script src="https://kit.fontawesome.com/c99dafd52c.js" crossorigin="anonymous"></script>
+        <!--Script para usar Luxon JS-->
+        <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.3/build/global/luxon.min.js"></script>
+        <!--Script para usar SweetAlert JS-->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <!--Script para usar Bootstrap-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
         <!--Script personalizado-->
-        <script src="../js/seccion-carrito-de-compras.js"></script>
+        <script src="../js/finalizar-pago.js"></script>
     </body>
 </html>
