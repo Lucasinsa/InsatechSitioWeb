@@ -62,7 +62,7 @@ let mostrando;
 //Función asíncrona que ejecuta el código de la página
 const ejecutarCodigo = async() => {
     //Espero a que se pidan los productos a la api
-    await pedirProductosApi("../data/data.json");
+    await pedirProductosApi("./data/data.json");
     //Si hay productos en el carrito del LS, actualizo el stock y cantidad en carrito 
     //de los productos que se encentran allí.
     carrito.length !== 0 && recuperarProductos();
