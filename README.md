@@ -7,7 +7,7 @@ It is an e-commerce for the sale of electronic components. At first, featured pr
 ## APP navegation
 The following GIF shows the different possible routes of the APP:
 
-![Gif Functioning](public/funcionamiento.gif)
+![Gif Functioning](./images/funcionamiento-insatech.gif)
 
 - **Logo:** Directs to index.html.
 - **Cart:** Directs to ./pages/seccion-carrito-de-compras.html.
